@@ -1,0 +1,1 @@
+"0","plot(ts(fitted(cosine_model)), ylab='Агаарын тээврийн зорчигчид', main = ""Косинус ашиглcан агаарын тээврийн зорчигчдод зориулсан улирлын загвар "" , ylim = c(min(c(fitted(cosine_model), as.vector(df_TS))) ,max(c(fitted(cosine_model), as.vector(df_TS))) ),col=""red"")"

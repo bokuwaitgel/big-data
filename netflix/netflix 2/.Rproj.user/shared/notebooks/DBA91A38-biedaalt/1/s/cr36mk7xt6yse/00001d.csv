@@ -1,0 +1,6 @@
+"0","df_show_categories <- df %>% "
+"0","                        select(c('show_id','type','listed_in')) %>% "
+"0","                        separate_rows(listed_in, sep = ',') %>%"
+"0","                        rename(Show_Category = listed_in)"
+"0","df_show_categories$Show_Category <- trimws(df_show_categories$Show_Category)"
+"0","head(df_show_categories)"

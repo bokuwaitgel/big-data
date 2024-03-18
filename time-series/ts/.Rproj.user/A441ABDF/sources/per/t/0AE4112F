@@ -1,0 +1,27 @@
+{
+    "id": "0AE4112F",
+    "path": "~/Documents/school/big-data/netflix/netflix/biedaalt.Rmd",
+    "project_path": null,
+    "type": "r_markdown",
+    "hash": "3708821958",
+    "contents": "",
+    "dirty": false,
+    "created": 1703064800914.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "chunk_output_type": "inline",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "21,0",
+        "scrollLine": "3"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1702593009,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1702593009,
+    "read_only": false,
+    "read_only_alternatives": []
+}

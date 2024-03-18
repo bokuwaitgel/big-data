@@ -1,0 +1,11 @@
+"0","```r
+# Мод олох функч
+getmode <- function(v) {
+   uniqv <- unique(v)
+   uniqv[which.max(tabulate(match(v, uniqv)))]
+}
+df$rating[is.na(df$rating)] <- getmode(df$rating)
+
+# давхардсан өгөгдөлүүдийг цэвэхлэх -> title, country, type болон release_year
+df <- distinct(df, type, title, country, release_year, show_id, listed_in, .keep_all = T)
+```"

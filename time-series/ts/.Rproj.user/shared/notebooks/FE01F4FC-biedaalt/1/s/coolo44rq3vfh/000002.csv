@@ -1,0 +1,5 @@
+"0","```r
+# Хэрэгцээгүй утгуудыг цэвэрлэх явц
+df <- tibble::as_tibble(df) %>% 
+  select(-c( description))
+```"

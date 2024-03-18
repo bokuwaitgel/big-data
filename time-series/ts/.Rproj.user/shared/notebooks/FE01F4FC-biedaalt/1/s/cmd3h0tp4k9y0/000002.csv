@@ -1,0 +1,38 @@
+"0","```r
+
+s <- strsplit(df$country, split = \", \")
+cntry_split <- data.frame(type = rep(df$type, sapply(s, length)), country = unlist(s))
+cntry_split$country <- as.character(gsub(\",\",\"\", cntry_split$country))
+
+amount_by_country <- na.omit(cntry_split) %>%
+  group_by(country, type) %>%
+  summarise(count = n())
+```"
+"1","`summarise()` has grouped output by 'country'. You can override using the `.groups` argument.
+"
+"0","```r
+w <- reshape(data = data.frame(amount_by_country), 
+             idvar = \"country\",
+             v.names = \"count\",
+             timevar = \"type\",
+             direction = \"wide\") %>% 
+  arrange(desc(count.Movie)) %>% top_n(12)
+```"
+"1","Selecting by count.TV Show
+"
+"0","```r
+names(w)[2] <- \"count_movie\"
+names(w)[3] <- \"count_tv_show\"
+w <- w[order(desc(w$count_movie + w$count_tv_show)),] 
+
+plot_ly(w, x = w$country, y = ~count_movie, 
+        type = 'bar', name = 'Movie', marker = list(color = '#bd3939')) %>% 
+  add_trace(y = ~count_tv_show, name = 'TV Show', marker = list(color = '#399ba3')) %>% 
+  layout(xaxis = list(categoryorder = \"array\", 
+                      categoryarray = w$country, 
+                      title = \"Улс\"), 
+         yaxis = list(title = 'Өгөгдлийн тоо'),
+         barmode = 'stack', 
+         title = \"Үйлдвэрлэсэн агуулгын хэмжээгээр эхний 12 улс\", margin = list(t = 54),
+         legend = list(x = 100, y = 0.5)) 
+```"

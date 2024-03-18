@@ -1,0 +1,10 @@
+"0","```r
+df_people_freq<- df_show_people %>% group_by(person,role) %>% 
+                    summarise(count = n()) %>% arrange(desc(count))
+```"
+"1","`summarise()` has grouped output by 'person'. You can override using the `.groups` argument.
+"
+"0","```r
+df_people_freq %>% group_by(role) %>% top_n(10,count) %>% ungroup() %>% ggplot(aes(x = fct_reorder(person,count,.desc = T), y = count, fill = role)) + 
+            geom_bar(stat = 'identity') + scale_x_discrete() + facet_wrap(~role, scales = 'free_x')  + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),legend.position = 'none') + labs(x = 'жүжигчин болон зохиолчдын нэрс')
+```"

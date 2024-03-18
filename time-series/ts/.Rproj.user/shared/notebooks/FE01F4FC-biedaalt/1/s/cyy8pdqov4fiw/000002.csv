@@ -1,0 +1,5 @@
+"0","```r
+ggplot(subset(df_category_correlations, type == 'TV Show'), aes(x = Category1, y = Category2, fill = matched_count)) + 
+        geom_tile() + facet_wrap( ~type, scales = 'free') +  scale_fill_distiller(palette = \"Spectral\") + 
+            theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1), , legend.text = element_text(size = 14), legend.title = element_text(size = 16))
+```"

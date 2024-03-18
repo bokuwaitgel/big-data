@@ -1,0 +1,5 @@
+"0","# To visualise the fit"
+"0","plot(ts(fitted(seasonal_model)), ylab='Агаарын тээврийн зорчигчид', "
+"0","     main = ""Агаарын тээврийн зорчигч тээврийн цувралд улирлын чанартай загвар"" , "
+"0","     ylim = c(min(c(fitted(seasonal_model), as.vector(df_TS))) ,"
+"0","              max(c(fitted(seasonal_model), as.vector(df_TS))) ),col=""red"")"

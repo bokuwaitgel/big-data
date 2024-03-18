@@ -1,0 +1,24 @@
+"0","```r
+df_by_date_full <- df %>% group_by(date_added) %>% 
+  summarise(added_today = n()) %>% 
+  mutate(total_number_of_content = cumsum(added_today), type = \"Total\")
+
+df_by_date <- df %>% group_by(date_added, type) %>% 
+  summarise(added_today = n()) %>% 
+  ungroup() %>% 
+  group_by(type) %>%
+  mutate(total_number_of_content = cumsum(added_today))
+```"
+"1","`summarise()` has grouped output by 'date_added'. You can override using the `.groups` argument.
+"
+"0","```r
+full_data <- rbind(as.data.frame(df_by_date_full), as.data.frame(df_by_date))
+
+plot_ly(full_data, x = ~date_added, y = ~total_number_of_content, 
+        mode = 'lines', type = 'scatter',
+        color = ~type, colors = c(\"#bd3939\",  \"#9addbd\", \"#399ba3\")) %>% 
+  layout(yaxis = list(title = 'Тоо'), 
+         xaxis = list(title = 'он'), 
+         title = \"Жилийн болгоны агуулгын өсөлт\", margin = list(t = 54),
+         legend = list(x = 100, y = 0.5))
+```"

@@ -1,0 +1,2 @@
+"0","res = armasubsets(y=res_of_model3,nar=6,nma=6,y.name='test',ar.method='ols')"
+"0","plot(res)"

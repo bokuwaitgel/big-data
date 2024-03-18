@@ -1,0 +1,6 @@
+"0",""
+"0","#                                                       p,d,q                        P,D,Q"
+"0","model3_airline = arima(log(df_TS),order=c(0,1,0),seasonal=list(order=c(0,1,0), period=12))"
+"0","res_of_model3 = residuals(model3_airline);  "
+"0","par(mfrow=c(1,1))"
+"0","plot(res_of_model3,xlab='Цаг хугацаа',ylab='Үлдэгдэл',main=""Үлдэгдэлийн цагийн цувааны график"")"

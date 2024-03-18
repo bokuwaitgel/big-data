@@ -1,0 +1,33 @@
+"0","```r
+df_by_date_month <- df %>% group_by(month_added = floor_date(date_added, \"month\"), type) %>%
+  summarise(added_today = n())
+```"
+"1","`summarise()` has grouped output by 'month_added'. You can override using the `.groups` argument.
+"
+"0","```r
+wd <- reshape(data = data.frame(df_by_date_month),
+              idvar = \"month_added\",
+              v.names = \"added_today\",
+              timevar = \"type\",
+              direction = \"wide\")
+
+names(wd)[2] <- \"added_today_movie\"
+names(wd)[3] <- \"added_today_tv_show\"
+wd$added_today_movie[is.na(wd$added_today_movie)] <- 0
+wd$added_today_tv_show[is.na(wd$added_today_tv_show)] <- 0
+wd <-na.omit(wd)
+
+plot_ly(wd, x = wd$month_added, y = ~added_today_movie, 
+        type = 'bar', name = 'Movie', 
+        marker = list(color = '#bd3939')) %>% 
+  add_trace(y = ~added_today_tv_show, 
+            name = 'TV Show', 
+            marker = list(color = '#399ba3')) %>% 
+  layout(xaxis = list(categoryorder = 'array', 
+                      categoryarray = wd$month_added, 
+                      title = 'Он'), 
+         yaxis = list(title = 'Тоо'), 
+         barmode = 'stack', 
+         title = \"Сард нэмэгдсэн агуулгын хэмжээ\", margin = list(t = 54),
+         legend = list(x = 100, y = 0.5))
+```"

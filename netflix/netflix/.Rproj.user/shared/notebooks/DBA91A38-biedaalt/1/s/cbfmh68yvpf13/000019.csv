@@ -1,0 +1,4 @@
+"0",""
+"0","df_show_categories %>% mutate(Show_Category = fct_infreq(Show_Category)) %>% "
+"0","        ggplot(aes(x = Show_Category)) + "
+"0","            geom_bar() + scale_x_discrete() + facet_wrap(~type, scales = 'free_x')  +  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + coord_cartesian(xlim = c(1,20))"

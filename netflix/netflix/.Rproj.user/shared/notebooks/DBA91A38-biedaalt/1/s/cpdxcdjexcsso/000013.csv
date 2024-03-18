@@ -1,0 +1,31 @@
+"0",""
+"0","mov_duration_cntry <- na.omit(df[df$type == ""Movie"",][,c(""country"", ""duration"")])"
+"0",""
+"0","s_dur <- strsplit(mov_duration_cntry$country, split = "", "")"
+"0","duration_full <- data.frame(duration = rep(mov_duration_cntry$duration,"
+"0","                                           sapply(s_dur, length)),"
+"0","                            country = unlist(s_dur))"
+"0","duration_full$duration <- as.numeric(gsub("" min"","""", duration_full$duration))"
+"0",""
+"0","duration_full_subset <- duration_full[duration_full$country %in% "
+"0","                                        c(""United States"", ""India"", ""United Kingdom"","
+"0","                                          ""Canada"", ""France"", ""Japan"", ""Spain"", ""South Korea"","
+"0","                                          ""Mexico"", ""Australia"", ""China"", ""Taiwan""),]"
+"0",""
+"0","plot_ly(duration_full_subset, y = ~duration, color = ~country, type = ""box"") %>% "
+"0","  layout(xaxis = list(title = ""Улс""), "
+"0","         yaxis = list(title = 'Хугацаа (минутаар)'),"
+"0","         title = ""Шилдэг 12 орны киноны үргэлжлэх хугацаа"", margin = list(t = 54),"
+"0","         legend = list(x = 100, y = 0.5))"
+"2","Warning: n too large, allowed maximum for palette Set2 is 8
+Returning the palette you asked for with that many colors
+"
+"2","Warning: n too large, allowed maximum for palette Set2 is 8
+Returning the palette you asked for with that many colors
+"
+"2","Warning: n too large, allowed maximum for palette Set2 is 8
+Returning the palette you asked for with that many colors
+"
+"2","Warning: n too large, allowed maximum for palette Set2 is 8
+Returning the palette you asked for with that many colors
+"

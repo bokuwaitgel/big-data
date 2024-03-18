@@ -1,0 +1,4 @@
+"0","# дата шалтгалт"
+"0","kable(df[1:10,]) %>%"
+"0","  kable_styling(bootstrap_options = c(""striped"", ""hover"", ""condensed"")) %>%"
+"0","  scroll_box(width = ""100%"", height = ""500px"")"

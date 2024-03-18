@@ -1,0 +1,13 @@
+"0","```r
+packages = c('tidyverse', 'kableExtra', 'plotly', 'lubridate', 'pacman')
+
+for (p in packages){
+  if (!require(p,character.only = T)){
+    install.packages(p)
+  }
+  library(p,character.only = T)
+}
+p_load(tidyverse,lubridate,showtext)
+showtext_auto()
+font_add_google(\"Bebas Neue\", \"Bebas Neue\")
+```"

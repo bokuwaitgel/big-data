@@ -1,0 +1,2 @@
+"0","plot(ts(fitted(quadratic_model)), ylim = c(min(c(fitted(quadratic_model), as.vector(df_TS))), max(c(fitted(quadratic_model),as.vector(df_TS)))),"
+"0","     ylab='Агаарын тээврийн зорчигчид' , main = ""Агаарын тээврийн зорчигчдодын квадрат муруй "", type=""l"",lty=2,col=""red"")"

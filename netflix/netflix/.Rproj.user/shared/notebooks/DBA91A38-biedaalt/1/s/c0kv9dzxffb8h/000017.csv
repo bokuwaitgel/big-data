@@ -1,0 +1,5 @@
+"0","# он сарын порматын шалгалт"
+"0","kable(df[1:10,]) %>%"
+"0","  kable_styling(bootstrap_options = c(""striped"", ""hover"", ""condensed"")) %>% "
+"0","  column_spec(6, color = 'red', bold = T) %>% "
+"0","  scroll_box(width = ""100%"", height = ""352px"")"

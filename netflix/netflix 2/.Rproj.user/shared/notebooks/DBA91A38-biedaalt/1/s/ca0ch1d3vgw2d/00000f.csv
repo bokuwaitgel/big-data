@@ -1,0 +1,2 @@
+"0","# он сарын утгын порматын өөрчлөлт"
+"0","df$date_added <- as.Date(df$date_added, format = ""%B %d, %Y"")"

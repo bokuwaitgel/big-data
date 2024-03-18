@@ -1,0 +1,25 @@
+"0","```r
+s_genres <- strsplit(df$listed_in, split = \", \")
+genres_listed_in <- data.frame(type = rep(df$type, sapply(s_genres, length)), 
+                               listed_in = unlist(s_genres))
+genres_listed_in$listed_in <- as.character(gsub(\",\",\"\",genres_listed_in$listed_in))
+
+df_by_listed_in <- genres_listed_in %>% 
+  group_by(type, listed_in) %>% 
+  summarise(count = n()) %>% 
+  arrange(desc(count)) %>% top_n(10)
+```"
+"1","`summarise()` has grouped output by 'type'. You can override using the `.groups` argument.Selecting by count
+"
+"0","```r
+plot_ly(df_by_listed_in, x = ~listed_in, y = ~count,
+        type = 'bar', color = ~type,
+        colors = c(\"#bd3939\", \"#399ba3\")) %>%
+  layout(xaxis = list(categoryorder = \"array\", 
+                      categoryarray = df_by_listed_in$listed_in, 
+                      title = 'Төрөл',
+                      tickangle = 45), 
+         yaxis = list(title = 'Тоо хэмжээ'), 
+         title = \"Шилдэг төрлүүд (Кино болон ТВ шоу)\", margin = list(t = 54),
+         legend = list(x = 100, y = 0.5))
+```"

@@ -1,0 +1,11 @@
+"0","```r
+df_by_rating <- df %>% group_by(rating) %>% 
+  summarise(count = n())
+
+plot_ly(df_by_rating, type = 'pie',
+        labels = ~rating, values = ~count) %>% 
+  layout(xaxis = list(showgrid = F, zeroline = F, showticklabels = F),
+         yaxis = list(showgrid = F, zeroline = F, showticklabels = F),
+         title = \"Үнэлгээгээр агуулгын хуваарилалт\", margin = list(t = 54),
+         legend = list(x = 100, y = 0.5))
+```"

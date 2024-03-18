@@ -1,0 +1,10 @@
+"0","```r
+# Хоосон утгатай өгөгдлийг илрүүлэх
+data.frame(var = c(colnames(df)), 
+           missing = sapply(df, function(x) sum(is.na(x))), row.names = NULL) %>%
+  mutate(missing = cell_spec(missing, \"html\", 
+                             color = ifelse(missing > 0, 'red', 'black'))) %>% 
+  rename(`Баганын нэр` = var, `Хоосон утгын тоо` = missing) %>%
+  kable(format = \"html\", escape = F, align = c(\"l\", \"c\")) %>%
+  kable_styling(bootstrap_options = c(\"striped\", \"hover\", \"condensed\"), full_width = F)
+```"

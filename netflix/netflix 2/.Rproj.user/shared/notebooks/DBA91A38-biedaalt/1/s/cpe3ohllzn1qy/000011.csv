@@ -1,0 +1,6 @@
+"0","df %>% select(c('show_id','cast','director')) %>% "
+"0","        gather(key = 'role', value = 'person', cast, director) %>% "
+"0","             filter(person != """") %>% separate_rows(person, sep = ',') -> df_show_people"
+"0",""
+"0","df_show_people$person <- trimws(df_show_people$person)"
+"0","head(df_show_people)"

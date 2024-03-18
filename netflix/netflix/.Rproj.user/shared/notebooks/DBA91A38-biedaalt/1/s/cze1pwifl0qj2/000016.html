@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>body{background-color:white;}</style>
+<script src="lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="lib/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="lib/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="lib/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="lib/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="lib/kePrint-0.0.1/kePrint.js"></script>
+<link href="lib/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+</head>
+<body>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:500px; overflow-x: scroll; width:100%; "><table class="table table-striped table-hover table-condensed" style="margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> show_id </th>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> type </th>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> title </th>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> director </th>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> cast </th>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> country </th>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> date_added </th>
+   <th style="text-align:right;position: sticky; top:0; background-color: #FFFFFF;"> release_year </th>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> rating </th>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> duration </th>
+   <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;"> listed_in </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> s1 </td>
+   <td style="text-align:left;"> Movie </td>
+   <td style="text-align:left;"> Dick Johnson Is Dead </td>
+   <td style="text-align:left;"> Kirsten Johnson </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> United States </td>
+   <td style="text-align:left;"> September 25, 2021 </td>
+   <td style="text-align:right;"> 2020 </td>
+   <td style="text-align:left;"> PG-13 </td>
+   <td style="text-align:left;"> 90 min </td>
+   <td style="text-align:left;"> Documentaries </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> s2 </td>
+   <td style="text-align:left;"> TV Show </td>
+   <td style="text-align:left;"> Blood &amp; Water </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> Ama Qamata, Khosi Ngema, Gail Mabalane, Thabang Molaba, Dillon Windvogel, Natasha Thahane, Arno Greeff, Xolile Tshabalala, Getmore Sithole, Cindy Mahlangu, Ryle De Morny, Greteli Fincham, Sello Maake Ka-Ncube, Odwa Gwanya, Mekaila Mathys, Sandi Schultz, Duane Williams, Shamilla Miller, Patrick Mofokeng </td>
+   <td style="text-align:left;"> South Africa </td>
+   <td style="text-align:left;"> September 24, 2021 </td>
+   <td style="text-align:right;"> 2021 </td>
+   <td style="text-align:left;"> TV-MA </td>
+   <td style="text-align:left;"> 2 Seasons </td>
+   <td style="text-align:left;"> International TV Shows, TV Dramas, TV Mysteries </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> s3 </td>
+   <td style="text-align:left;"> TV Show </td>
+   <td style="text-align:left;"> Ganglands </td>
+   <td style="text-align:left;"> Julien Leclercq </td>
+   <td style="text-align:left;"> Sami Bouajila, Tracy Gotoas, Samuel Jouy, Nabiha Akkari, Sofia Lesaffre, Salim Kechiouche, Noureddine Farihi, Geert Van Rampelberg, Bakary Diombera </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> September 24, 2021 </td>
+   <td style="text-align:right;"> 2021 </td>
+   <td style="text-align:left;"> TV-MA </td>
+   <td style="text-align:left;"> 1 Season </td>
+   <td style="text-align:left;"> Crime TV Shows, International TV Shows, TV Action &amp; Adventure </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> s4 </td>
+   <td style="text-align:left;"> TV Show </td>
+   <td style="text-align:left;"> Jailbirds New Orleans </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> September 24, 2021 </td>
+   <td style="text-align:right;"> 2021 </td>
+   <td style="text-align:left;"> TV-MA </td>
+   <td style="text-align:left;"> 1 Season </td>
+   <td style="text-align:left;"> Docuseries, Reality TV </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> s5 </td>
+   <td style="text-align:left;"> TV Show </td>
+   <td style="text-align:left;"> Kota Factory </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> Mayur More, Jitendra Kumar, Ranjan Raj, Alam Khan, Ahsaas Channa, Revathi Pillai, Urvi Singh, Arun Kumar </td>
+   <td style="text-align:left;"> India </td>
+   <td style="text-align:left;"> September 24, 2021 </td>
+   <td style="text-align:right;"> 2021 </td>
+   <td style="text-align:left;"> TV-MA </td>
+   <td style="text-align:left;"> 2 Seasons </td>
+   <td style="text-align:left;"> International TV Shows, Romantic TV Shows, TV Comedies </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> s6 </td>
+   <td style="text-align:left;"> TV Show </td>
+   <td style="text-align:left;"> Midnight Mass </td>
+   <td style="text-align:left;"> Mike Flanagan </td>
+   <td style="text-align:left;"> Kate Siegel, Zach Gilford, Hamish Linklater, Henry Thomas, Kristin Lehman, Samantha Sloyan, Igby Rigney, Rahul Kohli, Annarah Cymone, Annabeth Gish, Alex Essoe, Rahul Abburi, Matt Biedel, Michael Trucco, Crystal Balint, Louis Oliver </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> September 24, 2021 </td>
+   <td style="text-align:right;"> 2021 </td>
+   <td style="text-align:left;"> TV-MA </td>
+   <td style="text-align:left;"> 1 Season </td>
+   <td style="text-align:left;"> TV Dramas, TV Horror, TV Mysteries </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> s7 </td>
+   <td style="text-align:left;"> Movie </td>
+   <td style="text-align:left;"> My Little Pony: A New Generation </td>
+   <td style="text-align:left;"> Robert Cullen, José Luis Ucha </td>
+   <td style="text-align:left;"> Vanessa Hudgens, Kimiko Glenn, James Marsden, Sofia Carson, Liza Koshy, Ken Jeong, Elizabeth Perkins, Jane Krakowski, Michael McKean, Phil LaMarr </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> September 24, 2021 </td>
+   <td style="text-align:right;"> 2021 </td>
+   <td style="text-align:left;"> PG </td>
+   <td style="text-align:left;"> 91 min </td>
+   <td style="text-align:left;"> Children &amp; Family Movies </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> s8 </td>
+   <td style="text-align:left;"> Movie </td>
+   <td style="text-align:left;"> Sankofa </td>
+   <td style="text-align:left;"> Haile Gerima </td>
+   <td style="text-align:left;"> Kofi Ghanaba, Oyafunmike Ogunlano, Alexandra Duah, Nick Medley, Mutabaruka, Afemo Omilami, Reggie Carter, Mzuri </td>
+   <td style="text-align:left;"> United States, Ghana, Burkina Faso, United Kingdom, Germany, Ethiopia </td>
+   <td style="text-align:left;"> September 24, 2021 </td>
+   <td style="text-align:right;"> 1993 </td>
+   <td style="text-align:left;"> TV-MA </td>
+   <td style="text-align:left;"> 125 min </td>
+   <td style="text-align:left;"> Dramas, Independent Movies, International Movies </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> s9 </td>
+   <td style="text-align:left;"> TV Show </td>
+   <td style="text-align:left;"> The Great British Baking Show </td>
+   <td style="text-align:left;"> Andy Devonshire </td>
+   <td style="text-align:left;"> Mel Giedroyc, Sue Perkins, Mary Berry, Paul Hollywood </td>
+   <td style="text-align:left;"> United Kingdom </td>
+   <td style="text-align:left;"> September 24, 2021 </td>
+   <td style="text-align:right;"> 2021 </td>
+   <td style="text-align:left;"> TV-14 </td>
+   <td style="text-align:left;"> 9 Seasons </td>
+   <td style="text-align:left;"> British TV Shows, Reality TV </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> s10 </td>
+   <td style="text-align:left;"> Movie </td>
+   <td style="text-align:left;"> The Starling </td>
+   <td style="text-align:left;"> Theodore Melfi </td>
+   <td style="text-align:left;"> Melissa McCarthy, Chris O'Dowd, Kevin Kline, Timothy Olyphant, Daveed Diggs, Skyler Gisondo, Laura Harrier, Rosalind Chao, Kimberly Quinn, Loretta Devine, Ravi Kapoor </td>
+   <td style="text-align:left;"> United States </td>
+   <td style="text-align:left;"> September 24, 2021 </td>
+   <td style="text-align:right;"> 2021 </td>
+   <td style="text-align:left;"> PG-13 </td>
+   <td style="text-align:left;"> 104 min </td>
+   <td style="text-align:left;"> Comedies, Dramas </td>
+  </tr>
+</tbody>
+</table></div> <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}})</script><script async src="https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
